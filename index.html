@@ -9,59 +9,41 @@
   :root{
     --bg:#fafafa;
     --panel:#ffffff;
-    --title:#07203a;          /* deep navy for headings */
-    --text:#2f3740;           /* dark grey for body text */
+    --title:#07203a;
+    --text:#2f3740;
     --muted:#6b7280;
-    --accent:#7a2030;         /* muted burgundy accent */
+    --accent:#7a2030;
     --accent-2:#9b2c3a;
     --card-radius:14px;
     --max-width:1200px;
     --gutter:28px;
   }
-
-  /* base */
   html,body{height:100%;margin:0;background:var(--bg);font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;color:var(--text);-webkit-font-smoothing:antialiased}
   a{color:inherit}
   .container{max-width:var(--max-width);margin:36px auto;padding:0 var(--gutter)}
-
-  /* header */
   header{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(7,32,58,0.06);background:linear-gradient(180deg,rgba(255,255,255,0.7),transparent)}
   .brand{display:flex;gap:14px;align-items:center}
   .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:18px}
   .brand-title{font-size:20px;font-weight:800;color:var(--title)}
   .brand-sub{font-size:13px;color:var(--muted);margin-top:4px}
-
   nav{display:flex;gap:10px;align-items:center}
   .nav-btn{background:transparent;border:0;padding:6px 10px;border-radius:10px;font-weight:700;color:var(--title);cursor:pointer}
   .nav-btn:hover{background:rgba(122,32,48,0.06)}
-  .admin-btn{padding:8px 12px;border-radius:10px;border:1px solid rgba(7,32,58,0.06);background:transparent;color:var(--title);cursor:pointer}
-
-  /* hero / content */
   .hero{background:var(--panel);border-radius:var(--card-radius);padding:36px;border:1px solid rgba(7,32,58,0.04);box-shadow:0 10px 30px rgba(7,32,58,0.03)}
   h1.main{margin:0;font-family:Merriweather,serif;font-size:36px;color:var(--title);font-weight:700;line-height:1.05}
   .lead{margin-top:16px;font-size:19px;color:var(--text);max-width:110ch;line-height:1.8}
   h2.section{margin-top:28px;margin-bottom:8px;font-size:22px;color:var(--title);font-weight:700}
   p{font-size:18px;color:var(--text);line-height:1.7}
-
-  /* card */
   .card{background:linear-gradient(180deg,#ffffff,#fcfdfe);padding:18px;border-radius:12px;border:1px solid rgba(7,32,58,0.04);margin-top:12px}
   .muted{color:var(--muted);font-size:15px}
-
-  /* instructions - burgundy accent */
   .instructions{background:#fff6f7;border-left:6px solid var(--accent);padding:16px 18px;border-radius:10px;color:var(--text);margin-top:12px;font-size:17px}
   .instructions ol{margin:10px 0 0 18px;padding:0}
   .code-inline{display:inline-block;padding:6px 8px;border-radius:8px;background:#f6f7f8;border:1px solid rgba(7,32,58,0.04);font-family:ui-monospace,monospace}
-
-  /* econ link */
   .econ-cta{display:inline-flex;align-items:center;gap:12px;padding:12px 16px;border-radius:10px;background:transparent;border:1px solid rgba(7,32,58,0.06);text-decoration:none;margin-top:12px}
   .econ-cta .pill{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;border-radius:8px;padding:8px 10px;font-weight:800}
   .econ-cta .meta{display:flex;flex-direction:column;align-items:flex-start}
   .econ-cta .meta small{color:var(--muted);font-size:13px}
-
-  /* footer */
   footer{display:flex;justify-content:space-between;align-items:center;padding:18px 0;margin-top:36px;border-top:1px solid rgba(7,32,58,0.06);font-size:14px;color:var(--muted)}
-
-  /* overlay (subject codes & timers) */
   .overlay{position:fixed;inset:0;display:none;z-index:999;overflow:auto;background:rgba(0,0,0,0.35);align-items:center;justify-content:center;padding:30px}
   .overlay.show{display:flex}
   .panel{background:linear-gradient(180deg,#021b2e,#012235);color:#e8f6ff;border-radius:12px;padding:26px;max-width:920px;width:100%;border:1px solid rgba(122,32,48,0.06);box-shadow:0 30px 80px rgba(2,12,30,0.6)}
@@ -74,44 +56,12 @@
   .code-number{font-family:ui-monospace,monospace;color:#ecfaff;font-size:58px;letter-spacing:10px;font-weight:900}
   .timer-box{background:linear-gradient(180deg,#021b33,#012033);padding:22px;border-radius:12px;text-align:center;border:1px solid rgba(0,212,255,0.03)}
   .timer-value{font-weight:900;font-size:34px;color:#dff7ff;font-family:Inter,monospace}
-
   .close-x{background:transparent;border:0;color:#cfe8ff;font-size:26px;cursor:pointer}
-
-  /* admin modal */
-  .admin-modal{display:none;position:fixed;inset:0;z-index:1001;background:rgba(0,0,0,0.45);align-items:center;justify-content:center;padding:24px}
-  .admin-card{background:var(--panel);border-radius:12px;padding:20px;max-width:980px;width:100%;box-shadow:0 20px 60px rgba(7,32,58,0.08)}
-  .admin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px;align-items:start}
-  .admin-item{background:linear-gradient(180deg,#fbfcff,#f7f9fb);padding:12px;border-radius:10px;border:1px solid rgba(7,32,58,0.04);text-align:center}
-  .btn{padding:10px 12px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
-  .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
-  .btn-ghost{background:transparent;border:1px solid rgba(7,32,58,0.06);color:var(--text)}
-  input[type=text], input[type=password], textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(7,32,58,0.06);margin-top:8px;background:#fff;color:var(--text);font-size:15px}
-  textarea{resize:vertical}
-
-  /* editor overlay (full-screen editing) */
-  .editor-overlay{position:fixed;inset:0;z-index:1200;background:rgba(10,12,15,0.6);display:none;align-items:center;justify-content:center;padding:18px}
-  .editor-panel{background:var(--panel);border-radius:12px;padding:22px;max-width:1100px;width:100%;max-height:92vh;overflow:auto;box-shadow:0 30px 80px rgba(2,12,30,0.6)}
-  .editor-section{border:1px solid rgba(7,32,58,0.04);padding:12px;border-radius:8px;margin-bottom:12px;background:linear-gradient(180deg,#fff,#fbfdff)}
-
-  /* responsiveness */
-  @media (max-width:1000px){
-    .admin-grid{grid-template-columns:1fr 1fr}
-  }
-  @media (max-width:680px){
-    header{padding:12px 0}
-    .brand-title{font-size:18px}
-    h1.main{font-size:28px}
-    .topic-name{font-size:22px}
-    .code-number{font-size:44px;letter-spacing:8px}
-    .admin-grid{grid-template-columns:1fr}
-    .editor-panel{padding:16px}
-  }
 </style>
 </head>
 <body>
 
 <div class="container">
-  <!-- header -->
   <header>
     <div class="brand" aria-hidden>
       <div class="logo">EL</div>
@@ -120,43 +70,30 @@
         <div class="brand-sub">Free tutoring - Maths, Physics, EPQ</div>
       </div>
     </div>
-
     <nav aria-label="Main navigation">
       <button class="nav-btn" data-topic="maths">➗ Maths</button>
       <button class="nav-btn" data-topic="physics">🔭 Physics</button>
       <button class="nav-btn" data-topic="epq">📝 EPQ</button>
-      <button id="adminOpen" class="admin-btn" style="margin-left:12px">⚙️ Admin</button>
     </nav>
   </header>
 
-  <!-- main -->
   <main class="hero" role="main" aria-labelledby="main-heading">
     <h1 id="main-heading" class="main">Why I’m Doing This</h1>
-
-    <p id="main-desc" class="lead">
+    <p class="lead">
       EarlyLearn exists to reduce inequality in access to academic support. Many students benefit from paid private tuition while others who would benefit most cannot afford it. EarlyLearn provides free, volunteer tutoring to students eligible for contextual free school meals so those students can access similar support and compete on fairer terms.
     </p>
 
-    <div class="card" aria-labelledby="free-tutoring-head">
-      <h2 id="free-tutoring-head" class="section">Free Tutoring:</h2>
-      <p id="free-tutoring-desc" class="muted">
+    <div class="card">
+      <h2 class="section">Free Tutoring:</h2>
+      <p class="muted">
         EarlyLearn offers volunteer tutoring sessions, resources and guided support for students eligible for contextual free school meals. Upcoming sessions (TSA &amp; TMA support) will be scheduled and shared with sign-ups.
       </p>
-
-      <div style="margin-top:12px">
-        <h3 style="margin:0;font-size:16px;color:var(--title);font-weight:800">Tutoring program (summary)</h3>
-        <p id="tutoring-program-desc" class="muted" style="margin-top:8px">
-          • First-time sign-up: one month of tutoring (4 weeks), typically 4 short sessions per week.<br>
-          • The program is one-time per student (to keep it fair). After the month finishes, the code/timer resets so another student can use the next available slot (first-come, first-served).
-        </p>
-      </div>
-
-      <div class="instructions" role="note" aria-label="Booking instructions" style="margin-top:14px">
+      <div class="instructions">
         <strong>How to Book — Important</strong>
-        <ol id="how-to-book-list" style="margin:10px 0 0 18px;color:#3b3838">
-          <li>Open the subject and copy the 6-digit code shown for that subject.</li>
-          <li>Email <strong>newstreet123@gmail.com</strong> with the subject line exactly: <code class="code-inline">CODE - SUBJECT</code> (example: <code class="code-inline">012345 - Maths</code>).</li>
-          <li>Attach proof of contextual free school meal eligibility (school confirmation or document) in the email body.</li>
+        <ol>
+          <li>Open the subject and copy the 6-digit code shown for that subject (or view the timer).</li>
+          <li>Email <strong>newstreet123@gmail.com</strong> with the subject line exactly: <code class="code-inline">CODE - SUBJECT</code>.</li>
+          <li>Attach proof of contextual free school meal eligibility.</li>
           <li>We will reply to confirm your place and next steps.</li>
         </ol>
       </div>
@@ -164,38 +101,29 @@
 
     <div class="card" style="margin-top:18px">
       <h2 class="section">About Me:</h2>
-      <p id="about-me-desc">
-        My name is <strong>Dinesh Balu</strong>. I'm in Year 13 at King Edward's Camp Hill School for Boys. I study economics and care about education reform — EarlyLearn is a step towards making tutoring access less dependent on ability to pay.
-      </p>
+      <p>My name is <strong>Dinesh Balu</strong>. I'm in Year 13 at King Edward's Camp Hill School for Boys. I study economics and care about education reform — EarlyLearn is a step towards making tutoring access less dependent on ability to pay.</p>
     </div>
 
     <div class="card" style="margin-top:18px">
       <h2 class="section">EconomicsPost:</h2>
-      <p id="econpost-desc">
-        EconomicsPost is my blog where I write about books, articles and reflections on economics. I will add a link below to the EconomicsPost site once it is live. You can also share suggested resources.
-      </p>
-
-      <p style="margin-top:6px">If you want to access it, please click this link:</p>
-      <a id="econLink" class="econ-cta" href="https://www.economicspost.co.uk/" target="_blank" rel="noopener noreferrer">
+      <p>EconomicsPost is my blog where I write about books, articles and reflections on economics.</p>
+      <a id="econLink" class="econ-cta" href="https://www.early-learn.co.uk/" target="_blank" rel="noopener noreferrer">
         <span class="pill">E</span>
         <span class="meta">
           <strong style="font-size:15px;color:var(--title)">EconomicsPost</strong>
-          <small id="econLinkText">https://www.economicspost.co.uk/</small>
+          <small id="econLinkText">https://www.early-learn.co.uk/</small>
         </span>
       </a>
     </div>
   </main>
 
-  <!-- footer: note removed per request (we DO NOT show the earlier line) -->
   <footer>
     <div>© <span id="year"></span> EarlyLearn</div>
-    <div style="visibility:hidden">placeholder</div>
   </footer>
 </div>
 
-<!-- Subject overlay: code & timer -->
-<div id="subjectOverlay" class="overlay" aria-hidden="true" role="dialog" aria-modal="true">
-  <div class="panel" role="document" aria-labelledby="subjectTitle">
+<div id="subjectOverlay" class="overlay" aria-hidden="true">
+  <div class="panel">
     <div style="display:flex;justify-content:space-between;align-items:flex-start">
       <div class="topic-head">
         <div class="topic-icon" id="subjectIcon">#</div>
@@ -204,11 +132,8 @@
           <div id="subjectStatus" class="status-line">Status</div>
         </div>
       </div>
-      <div>
-        <button id="closeSubject" class="close-x" aria-label="Close overlay">✕</button>
-      </div>
+      <button id="closeSubject" class="close-x">✕</button>
     </div>
-
     <div style="margin-top:18px">
       <div class="label-line" id="subjectLabel">The code is:</div>
       <div id="subjectMain"></div>
@@ -216,198 +141,37 @@
   </div>
 </div>
 
-<!-- Admin modal -->
-<div id="adminModal" class="admin-modal" aria-hidden="true">
-  <div class="admin-card" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <div>
-        <h3 id="adminTitle" style="margin:0;font-size:18px;color:var(--title)">Admin Panel</h3>
-        <div class="muted" style="margin-top:6px">Manage subject codes/timers and update the EconomicsPost link. Use 'Edit Home Page' to edit content.</div>
-      </div>
-      <div>
-        <button id="closeAdmin" class="btn-ghost">✕</button>
-      </div>
-    </div>
-
-    <div id="adminGrid" class="admin-grid" style="margin-top:14px">
-      <!-- We'll inject items programmatically -->
-    </div>
-
-    <hr style="border:none;border-top:1px solid rgba(7,32,58,0.06);margin:16px 0">
-
-    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
-      <input id="adminEconLink" type="text" placeholder="https://example.com" style="flex:1">
-      <button id="adminEconUpdate" class="btn btn-primary">Update link</button>
-      <button id="adminEconReset" class="btn btn-ghost">Reset to default</button>
-    </div>
-
-    <div style="margin-top:12px;color:var(--muted);font-size:13px">Starting a 1-month timer removes the current code and begins the countdown. Generate new codes to allow immediate use.</div>
-  </div>
-</div>
-
-<!-- Editor overlay (full-screen same-tab editor) -->
-<div id="editorOverlay" class="editor-overlay" aria-hidden="true">
-  <div class="editor-panel" role="dialog" aria-modal="true" aria-labelledby="editorTitle">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <div>
-        <div id="editorTitle" style="font-size:18px;font-weight:800;color:var(--title)">Edit Home Page</div>
-        <div class="muted" style="margin-top:6px">Edit titles and descriptions separately. Save to apply changes across the site.</div>
-      </div>
-      <div>
-        <button id="closeEditor" class="btn-ghost">✕</button>
-      </div>
-    </div>
-
-    <div style="margin-top:16px">
-
-      <!-- Why I'm Doing This -->
-      <div class="editor-section">
-        <label style="font-weight:700">Why I’m Doing This — Title</label>
-        <input id="edit_main_title" type="text" />
-        <label style="font-weight:700;margin-top:8px">Why I’m Doing This — Description</label>
-        <textarea id="edit_main_desc" rows="4"></textarea>
-      </div>
-
-      <!-- Free Tutoring -->
-      <div class="editor-section">
-        <label style="font-weight:700">Free Tutoring — Title</label>
-        <input id="edit_free_title" type="text" />
-        <label style="font-weight:700;margin-top:8px">Free Tutoring — Description</label>
-        <textarea id="edit_free_desc" rows="3"></textarea>
-      </div>
-
-      <!-- Tutoring Program -->
-      <div class="editor-section">
-        <label style="font-weight:700">Tutoring Program — Title</label>
-        <input id="edit_program_title" type="text" />
-        <label style="font-weight:700;margin-top:8px">Tutoring Program — Description</label>
-        <textarea id="edit_program_desc" rows="3"></textarea>
-      </div>
-
-      <!-- How to Book -->
-      <div class="editor-section">
-        <label style="font-weight:700">How to Book — Title</label>
-        <input id="edit_how_title" type="text" />
-        <label style="font-weight:700;margin-top:8px">How to Book — Bullet 1</label>
-        <input id="edit_how_b1" type="text" />
-        <label style="font-weight:700;margin-top:6px">How to Book — Bullet 2</label>
-        <input id="edit_how_b2" type="text" />
-        <label style="font-weight:700;margin-top:6px">How to Book — Bullet 3</label>
-        <input id="edit_how_b3" type="text" />
-        <label style="font-weight:700;margin-top:6px">How to Book — Bullet 4</label>
-        <input id="edit_how_b4" type="text" />
-      </div>
-
-      <!-- About Me -->
-      <div class="editor-section">
-        <label style="font-weight:700">About Me — Title</label>
-        <input id="edit_about_title" type="text" />
-        <label style="font-weight:700;margin-top:8px">About Me — Description</label>
-        <textarea id="edit_about_desc" rows="3"></textarea>
-      </div>
-
-      <!-- EconomicsPost -->
-      <div class="editor-section">
-        <label style="font-weight:700">EconomicsPost — Title</label>
-        <input id="edit_econ_title" type="text" />
-        <label style="font-weight:700;margin-top:8px">EconomicsPost — Description</label>
-        <textarea id="edit_econ_desc" rows="3"></textarea>
-        <label style="font-weight:700;margin-top:8px">EconomicsPost — Link</label>
-        <input id="edit_econ_link" type="text" />
-      </div>
-
-      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:10px">
-        <button id="editorCancel" class="btn btn-ghost">Cancel</button>
-        <button id="editorSave" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <script>
-/* ---------- Configuration & state ---------- */
-const ADMIN_PASSWORD = 'Incendioblast123*';
+const CONFIG = {
+  econLink: "https://www.early-learn.co.uk/",
+  topics: {
+    maths: {
+      mode: "timer",
+      // Use UK-style DD/MM/YYYY HH:MM (24-hour)
+      targetDate: "27/12/2025 12:00",
+      code: null
+    },
+    physics: {
+      mode: "code",
+      code: "742915",
+      targetDate: null
+    },
+    epq: {
+      mode: "timer",
+      targetDate: "05/01/2026 09:00",
+      code: null
+    }
+  }
+};
+
 const TOPICS = [
   { id:'maths', name:'Maths', icon:'➗' },
   { id:'physics', name:'Physics', icon:'🔭' },
   { id:'epq', name:'EPQ', icon:'📝' }
 ];
-const STORAGE_KEY = 'earlylearn_site_state_v2'; // stores codes, econLink, timers
-const CONTENT_KEY = 'earlylearn_home_content_v2'; // stores editable text content
-const MONTH_MS = 30 * 24 * 60 * 60 * 1000;
-const DEFAULT_ECON = 'https://www.ionos.co.uk/hosting/web-hosting';
 
-/* ---------- Helpers ---------- */
-const now = ()=>Date.now();
-const genCode = ()=>String(Math.floor(Math.random()*1000000)).padStart(6,'0');
-
-function saveState(s){ localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); }
-function loadState(){
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if(!raw){
-      const init = {};
-      TOPICS.forEach(t=> init[t.id] = { code: genCode(), timerEnd: null });
-      init.econLink = DEFAULT_ECON;
-      saveState(init);
-      return init;
-    }
-    const p = JSON.parse(raw);
-    TOPICS.forEach(t=>{ if(!p[t.id]) p[t.id] = { code: genCode(), timerEnd: null }; });
-    if(!p.econLink) p.econLink = DEFAULT_ECON;
-    return p;
-  } catch(e){
-    const init = {};
-    TOPICS.forEach(t=> init[t.id] = { code: genCode(), timerEnd: null });
-    init.econLink = DEFAULT_ECON;
-    return init;
-  }
-}
-
-/* load or initialize editable content */
-function loadContent(){
-  try{
-    const raw = localStorage.getItem(CONTENT_KEY);
-    if(!raw){
-      const def = {
-        mainTitle: "Why I’m Doing This",
-        mainDesc: document.getElementById('main-desc').textContent.trim(),
-        freeTitle: "Free Tutoring",
-        freeDesc: document.getElementById('free-tutoring-desc').textContent.trim(),
-        programTitle: "Tutoring program (summary)",
-        programDesc: document.getElementById('tutoring-program-desc').textContent.trim(),
-        howTitle: "How to Book — Important",
-        howB1: "Open the subject and copy the 6-digit code shown for that subject.",
-        howB2: "Email newstreet123@gmail.com with the subject line exactly: CODE - SUBJECT (example: 012345 - Maths).",
-        howB3: "Attach proof of contextual free school meal eligibility (school confirmation or document) in the email body.",
-        howB4: "We will reply to confirm your place and next steps.",
-        aboutTitle: "About Me",
-        aboutDesc: document.getElementById('about-me-desc').textContent.trim(),
-        econTitle: "EconomicsPost",
-        econDesc: document.getElementById('econpost-desc').textContent.trim(),
-        econLink: DEFAULT_ECON
-      };
-      localStorage.setItem(CONTENT_KEY, JSON.stringify(def));
-      return def;
-    }
-    return JSON.parse(raw);
-  } catch(e){
-    return {};
-  }
-}
-function saveContent(c){ localStorage.setItem(CONTENT_KEY, JSON.stringify(c)); }
-
-/* ---------- State & Content ---------- */
-let STATE = loadState();
-let CONTENT = loadContent();
-
-/* ---------- DOM refs ---------- */
 const yearEl = document.getElementById('year');
 yearEl.textContent = new Date().getFullYear();
-
-const econLinkA = document.getElementById('econLink');
-const econLinkText = document.getElementById('econLinkText');
-
 const subjectOverlay = document.getElementById('subjectOverlay');
 const subjectIcon = document.getElementById('subjectIcon');
 const subjectTitle = document.getElementById('subjectTitle');
@@ -415,100 +179,20 @@ const subjectStatus = document.getElementById('subjectStatus');
 const subjectLabel = document.getElementById('subjectLabel');
 const subjectMain = document.getElementById('subjectMain');
 const closeSubject = document.getElementById('closeSubject');
-
-const adminOpen = document.getElementById('adminOpen');
-const adminModal = document.getElementById('adminModal');
-const adminGrid = document.getElementById('adminGrid');
-const closeAdmin = document.getElementById('closeAdmin');
-const adminEconLink = document.getElementById('adminEconLink');
-const adminEconUpdate = document.getElementById('adminEconUpdate');
-const adminEconReset = document.getElementById('adminEconReset');
-
-const editorOverlay = document.getElementById('editorOverlay');
-const editorSaveBtn = document.getElementById('editorSave');
-const editorCancelBtn = document.getElementById('editorCancel');
-const closeEditorBtn = document.getElementById('closeEditor');
-
-/* editor input refs */
-const edit_main_title = document.getElementById('edit_main_title');
-const edit_main_desc = document.getElementById('edit_main_desc');
-const edit_free_title = document.getElementById('edit_free_title');
-const edit_free_desc = document.getElementById('edit_free_desc');
-const edit_program_title = document.getElementById('edit_program_title');
-const edit_program_desc = document.getElementById('edit_program_desc');
-const edit_how_title = document.getElementById('edit_how_title');
-const edit_how_b1 = document.getElementById('edit_how_b1');
-const edit_how_b2 = document.getElementById('edit_how_b2');
-const edit_how_b3 = document.getElementById('edit_how_b3');
-const edit_how_b4 = document.getElementById('edit_how_b4');
-const edit_about_title = document.getElementById('edit_about_title');
-const edit_about_desc = document.getElementById('edit_about_desc');
-const edit_econ_title = document.getElementById('edit_econ_title');
-const edit_econ_desc = document.getElementById('edit_econ_desc');
-const edit_econ_link = document.getElementById('edit_econ_link');
-
-/* timer intervals map */
 let timers = {};
 
-/* ---------- Render content on page ---------- */
-function renderContentToPage(){
-  // titles / descriptions
-  document.getElementById('main-heading').textContent = CONTENT.mainTitle || "Why I’m Doing This";
-  document.getElementById('main-desc').textContent = CONTENT.mainDesc || "";
-  document.getElementById('free-tutoring-head').textContent = CONTENT.freeTitle || "Free Tutoring:";
-  document.getElementById('free-tutoring-desc').textContent = CONTENT.freeDesc || "";
-  document.getElementById('tutoring-program-desc').textContent = CONTENT.programDesc || "";
-  document.querySelector('#tutoring-program-desc').innerHTML = (CONTENT.programDesc || "").replace(/\n/g,'<br>');
-  document.getElementById('about-me-desc').innerHTML = CONTENT.aboutDesc || "";
-  document.getElementById('econpost-desc').innerHTML = CONTENT.econDesc || "";
-  document.getElementById('econLink').href = CONTENT.econLink || DEFAULT_ECON;
-  document.getElementById('econLinkText').textContent = CONTENT.econLink || DEFAULT_ECON;
-
-  // How to Book list items:
-  const list = document.getElementById('how-to-book-list');
-  list.innerHTML = '';
-  const b1 = CONTENT.howB1 || '';
-  const b2 = CONTENT.howB2 || '';
-  const b3 = CONTENT.howB3 || '';
-  const b4 = CONTENT.howB4 || '';
-  [b1,b2,b3,b4].forEach(t=>{
-    const li = document.createElement('li');
-    li.textContent = t;
-    list.appendChild(li);
-  });
+function parseDateUK(dateStr) {
+  const [d, m, yAndTime] = dateStr.split("/");
+  const [y, time] = yAndTime.split(" ");
+  const [hh, mm] = (time || "00:00").split(":");
+  return new Date(`${y}-${m}-${d}T${hh}:${mm}:00Z`);
 }
 
-/* ---------- Render econ link (used elsewhere) ---------- */
-function renderEcon(){
-  const link = STATE.econLink || DEFAULT_ECON;
-  econLinkA.href = link;
-  econLinkText.textContent = link;
-}
-
-/* ---------- Subject overlay logic (timer + code) ---------- */
-function renderSubjectMain(id){
-  const st = STATE[id];
-  if(st.timerEnd && now() < st.timerEnd){
-    subjectLabel.textContent = 'New code will be generated in:';
-    subjectStatus.textContent = 'Timer active';
-    updateTimer(id);
-  } else {
-    subjectLabel.textContent = 'The code is:';
-    subjectStatus.textContent = 'Available';
-    subjectMain.innerHTML = `<div class="code-box"><div class="code-number">${st.code}</div></div>`;
-  }
-}
-
-function updateTimer(id){
-  const st = STATE[id];
-  if(!st || !st.timerEnd){ renderSubjectMain(id); return; }
-  const diff = st.timerEnd - now();
-  if(diff <= 0){
-    st.timerEnd = null;
-    st.code = genCode();
-    saveState(STATE);
-    clearInterval(timers[id]); delete timers[id];
-    renderSubjectMain(id);
+function updateTimer(id, target) {
+  const diff = target - new Date();
+  if (diff <= 0) {
+    subjectMain.innerHTML = `<div class="timer-box"><div class="timer-value">0d 0h 0m 0s</div></div>`;
+    clearInterval(timers[id]);
     return;
   }
   const d = Math.floor(diff / (24*60*60*1000));
@@ -516,295 +200,42 @@ function updateTimer(id){
   const m = Math.floor(diff / (60*1000)) % 60;
   const s = Math.floor(diff / 1000) % 60;
   subjectMain.innerHTML = `<div class="timer-box"><div class="timer-value">${d}d ${h}h ${m}m ${s}s</div></div>`;
-  if(!timers[id]) timers[id] = setInterval(()=>updateTimer(id), 1000);
 }
 
-/* open subject overlay */
-function openSubject(id){
-  const topic = TOPICS.find(t=>t.id===id) || { name: id, icon: '•' };
+function renderSubjectMain(id) {
+  const t = CONFIG.topics[id];
+  if (t.mode === "code") {
+    subjectLabel.textContent = "The code is:";
+    subjectStatus.textContent = "Available";
+    subjectMain.innerHTML = `<div class="code-box"><div class="code-number">${t.code || "------"}</div></div>`;
+  } else if (t.mode === "timer") {
+    const target = parseDateUK(t.targetDate);
+    subjectLabel.textContent = "Time until new code will be generated:";
+    subjectStatus.textContent = "Timer active";
+    updateTimer(id, target);
+    timers[id] = setInterval(() => updateTimer(id, target), 1000);
+  }
+}
+
+function openSubject(id) {
+  const topic = TOPICS.find(t=>t.id===id);
   subjectTitle.textContent = topic.name;
   subjectIcon.textContent = topic.icon;
   renderSubjectMain(id);
   subjectOverlay.classList.add('show');
-  subjectOverlay.setAttribute('aria-hidden','false');
 }
 
-/* close subject */
-closeSubject.addEventListener('click', ()=> {
+closeSubject.addEventListener('click', () => {
   subjectOverlay.classList.remove('show');
-  subjectOverlay.setAttribute('aria-hidden','true');
-  Object.keys(timers).forEach(k=>{ clearInterval(timers[k]); delete timers[k]; });
+  Object.values(timers).forEach(clearInterval);
+  timers = {};
 });
 
-/* attach subject nav buttons */
-document.querySelectorAll('.nav-btn[data-topic]').forEach(btn => {
-  btn.addEventListener('click', ()=> openSubject(btn.getAttribute('data-topic')));
-});
-
-/* ---------- Admin: render grid & actions ---------- */
-function renderAdminGrid(){
-  adminGrid.innerHTML = '';
-
-  // Add "Edit Home Page" button at the top-left of the grid area
-  const editBtnWrapper = document.createElement('div');
-  editBtnWrapper.style.gridColumn = '1 / -1';
-  editBtnWrapper.style.display = 'flex';
-  editBtnWrapper.style.justifyContent = 'flex-start';
-  editBtnWrapper.style.gap = '8px';
-  editBtnWrapper.style.alignItems = 'center';
-
-  const editHomeBtn = document.createElement('button');
-  editHomeBtn.className = 'btn btn-primary';
-  editHomeBtn.textContent = 'Edit Home Page';
-  editHomeBtn.onclick = ()=> {
-    adminModal.style.display = 'none';
-    openEditor();
-  };
-  editBtnWrapper.appendChild(editHomeBtn);
-  adminGrid.appendChild(editBtnWrapper);
-
-  // Subject cards (grid items)
-  TOPICS.forEach(t=>{
-    const st = STATE[t.id];
-    const card = document.createElement('div');
-    card.className = 'admin-item';
-
-    const title = document.createElement('div');
-    title.innerHTML = `<div style="font-weight:800">${t.name}</div>`;
-    card.appendChild(title);
-
-    const info = document.createElement('div');
-    info.style.marginTop = '8px';
-    if(st.timerEnd && now() < st.timerEnd){
-      const daysLeft = Math.ceil((st.timerEnd - now())/(24*60*60*1000));
-      info.innerHTML = `<div class="muted">Timer running — ${daysLeft}d left</div>`;
-    } else {
-      info.innerHTML = `<div class="muted">Current code: <strong style="letter-spacing:3px;color:var(--title)">${st.code}</strong></div>`;
-    }
-    card.appendChild(info);
-
-    const actions = document.createElement('div');
-    actions.style.display = 'flex';
-    actions.style.gap = '8px';
-    actions.style.marginTop = '12px';
-    actions.style.justifyContent = 'center';
-
-    const startBtn = document.createElement('button');
-    startBtn.className = 'btn btn-primary';
-    startBtn.textContent = 'Start 1-month timer';
-    startBtn.onclick = ()=>{
-      if(!confirm(`Start a 1-month timer for ${t.name}? This removes the current code.`)) return;
-      STATE[t.id].timerEnd = now() + MONTH_MS;
-      STATE[t.id].code = null;
-      saveState(STATE);
-      renderAdminGrid();
-      alert(`${t.name} timer started.`);
-    };
-
-    const genBtn = document.createElement('button');
-    genBtn.className = 'btn btn-ghost';
-    genBtn.textContent = 'Generate new code';
-    genBtn.onclick = ()=>{
-      if(!confirm(`Generate a fresh code for ${t.name}?`)) return;
-      STATE[t.id].code = genCode();
-      STATE[t.id].timerEnd = null;
-      saveState(STATE);
-      renderAdminGrid();
-      alert(`${t.name} new code: ${STATE[t.id].code}`);
-    };
-
-    const resetBtn = document.createElement('button');
-    resetBtn.className = 'btn btn-ghost';
-    resetBtn.textContent = 'Reset (start timer)';
-    resetBtn.onclick = ()=>{
-      if(!confirm(`Reset ${t.name} (start a fresh 1-month timer and remove code)?`)) return;
-      STATE[t.id].timerEnd = now() + MONTH_MS;
-      STATE[t.id].code = null;
-      saveState(STATE);
-      renderAdminGrid();
-      alert(`${t.name} reset started.`);
-    };
-
-    actions.appendChild(startBtn);
-    actions.appendChild(genBtn);
-    actions.appendChild(resetBtn);
-    card.appendChild(actions);
-
-    adminGrid.appendChild(card);
-  });
-}
-
-/* admin open/close with password prompt */
-adminOpen.addEventListener('click', ()=> {
-  const pw = prompt('Enter admin password:');
-  if(pw === ADMIN_PASSWORD){
-    adminModal.style.display = 'flex';
-    adminModal.setAttribute('aria-hidden','false');
-    renderAdminGrid();
-    adminEconLink.value = STATE.econLink || DEFAULT_ECON;
-  } else if(pw !== null){
-    alert('Incorrect password');
-  }
-});
-
-closeAdmin.addEventListener('click', ()=> {
-  adminModal.style.display = 'none';
-  adminModal.setAttribute('aria-hidden','true');
-});
-
-/* update econ link */
-adminEconUpdate.addEventListener('click', ()=>{
-  const v = adminEconLink.value.trim();
-  if(!v || !/^https?:\/\//i.test(v)){ alert('Please paste a valid URL (include https://)'); return; }
-  STATE.econLink = v;
-  saveState(STATE);
-  renderEcon();
-  // Also update content store so editor shows updated link
-  CONTENT.econLink = v;
-  saveContent(CONTENT);
-  renderContentToPage();
-  alert('EconomicsPost link updated.');
-});
-
-/* reset econ link */
-adminEconReset.addEventListener('click', ()=>{
-  if(!confirm('Reset EconomicsPost link to default test URL?')) return;
-  STATE.econLink = DEFAULT_ECON;
-  saveState(STATE);
-  adminEconLink.value = STATE.econLink;
-  renderEcon();
-  CONTENT.econLink = DEFAULT_ECON;
-  saveContent(CONTENT);
-  renderContentToPage();
-  alert('Link reset to default.');
-});
-
-/* close admin modal when clicking outside */
-adminModal.addEventListener('click', (e)=>{
-  if(e.target === adminModal){
-    adminModal.style.display = 'none';
-    adminModal.setAttribute('aria-hidden','true');
-  }
-});
-
-/* ---------- Editor open, populate, save ---------- */
-function openEditor(){
-  // Populate editor fields from CONTENT (or defaults if missing)
-  CONTENT = loadContent(); // reload
-  edit_main_title.value = CONTENT.mainTitle || "Why I’m Doing This";
-  edit_main_desc.value = CONTENT.mainDesc || "";
-  edit_free_title.value = CONTENT.freeTitle || "Free Tutoring";
-  edit_free_desc.value = CONTENT.freeDesc || "";
-  edit_program_title.value = CONTENT.programTitle || "Tutoring program (summary)";
-  edit_program_desc.value = CONTENT.programDesc || "";
-  edit_how_title.value = CONTENT.howTitle || "How to Book — Important";
-  edit_how_b1.value = CONTENT.howB1 || "";
-  edit_how_b2.value = CONTENT.howB2 || "";
-  edit_how_b3.value = CONTENT.howB3 || "";
-  edit_how_b4.value = CONTENT.howB4 || "";
-  edit_about_title.value = CONTENT.aboutTitle || "About Me";
-  edit_about_desc.value = CONTENT.aboutDesc || "";
-  edit_econ_title.value = CONTENT.econTitle || "EconomicsPost";
-  edit_econ_desc.value = CONTENT.econDesc || "";
-  edit_econ_link.value = CONTENT.econLink || STATE.econLink || DEFAULT_ECON;
-
-  editorOverlay.style.display = 'flex';
-  editorOverlay.setAttribute('aria-hidden','false');
-}
-
-/* cancel editor */
-editorCancelBtn.addEventListener('click', ()=> {
-  editorOverlay.style.display = 'none';
-  editorOverlay.setAttribute('aria-hidden','true');
-});
-closeEditorBtn.addEventListener('click', ()=> {
-  editorOverlay.style.display = 'none';
-  editorOverlay.setAttribute('aria-hidden','true');
-});
-
-/* save editor */
-editorSaveBtn.addEventListener('click', ()=>{
-  // read values
-  const c = {
-    mainTitle: edit_main_title.value.trim(),
-    mainDesc: edit_main_desc.value.trim(),
-    freeTitle: edit_free_title.value.trim(),
-    freeDesc: edit_free_desc.value.trim(),
-    programTitle: edit_program_title.value.trim(),
-    programDesc: edit_program_desc.value.trim(),
-    howTitle: edit_how_title.value.trim(),
-    howB1: edit_how_b1.value.trim(),
-    howB2: edit_how_b2.value.trim(),
-    howB3: edit_how_b3.value.trim(),
-    howB4: edit_how_b4.value.trim(),
-    aboutTitle: edit_about_title.value.trim(),
-    aboutDesc: edit_about_desc.value.trim(),
-    econTitle: edit_econ_title.value.trim(),
-    econDesc: edit_econ_desc.value.trim(),
-    econLink: edit_econ_link.value.trim() || DEFAULT_ECON
-  };
-  // basic validation for link
-  if(c.econLink && !/^https?:\/\//i.test(c.econLink)){ alert('EconomicsPost link must start with http:// or https://'); return; }
-
-  // save content
-  CONTENT = c;
-  saveContent(CONTENT);
-
-  // also update STATE econ link so the admin link and econ CTA reflect changes
-  STATE.econLink = c.econLink;
-  saveState(STATE);
-
-  // apply to page
-  renderContentToPage();
-  renderEcon();
-
-  editorOverlay.style.display = 'none';
-  editorOverlay.setAttribute('aria-hidden','true');
-  alert('Home page updated and saved.');
-});
-
-/* ---------- Misc interactions ---------- */
-/* close editor/admin/overlay with Escape */
-document.addEventListener('keydown', (e)=>{
-  if(e.key === 'Escape'){
-    if(editorOverlay.style.display === 'flex'){
-      editorOverlay.style.display = 'none';
-      editorOverlay.setAttribute('aria-hidden','true');
-    }
-    if(adminModal.style.display === 'flex'){
-      adminModal.style.display = 'none';
-      adminModal.setAttribute('aria-hidden','true');
-    }
-    if(subjectOverlay.classList.contains('show')){
-      subjectOverlay.classList.remove('show');
-      subjectOverlay.setAttribute('aria-hidden','true');
-      Object.keys(timers).forEach(k=>{ clearInterval(timers[k]); delete timers[k]; });
-    }
-  }
-});
-
-/* ---------- Initialize state and render ---------- */
-(function init(){
-  // ensure STATE has defaults and expire timers if needed
-  TOPICS.forEach(t=>{
-    if(!STATE[t.id]) STATE[t.id] = { code: genCode(), timerEnd: null };
-    if(STATE[t.id].timerEnd && now() > STATE[t.id].timerEnd){
-      STATE[t.id].timerEnd = null;
-      STATE[t.id].code = genCode();
-    }
-  });
-  if(!STATE.econLink) STATE.econLink = DEFAULT_ECON;
-  saveState(STATE);
-
-  // load content and render
-  CONTENT = loadContent();
-  renderContentToPage();
-  renderEcon();
-})();
-
+document.querySelectorAll('.nav-btn').forEach(btn =>
+  btn.addEventListener('click', () => openSubject(btn.getAttribute('data-topic')))
+);
 </script>
 </body>
 </html>
-
 
 
